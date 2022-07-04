@@ -4,6 +4,7 @@ const targetPattern = "9hits.com"; //can be a domain, a part of an URL
 let maxpage = 3;
 //-- Config End --
 
+//Wait until the web page is finished loading
 await WaitForLoading();
 const isMobile = IsMobile ();
 if(isMobile) { //if current visitor is mobile, we need to click to the search box
