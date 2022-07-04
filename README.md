@@ -8,4 +8,12 @@ From [the macro editor](https://docs.9hits.com/macros/overview/#writing-your-scr
 
 
 # How to contribute
-Create your script file in `scripts` folder, add your script information to list.json file then make a pull request
+Create your script file in the `scripts` folder, add your script information to list.json file then make a pull request. For example
+```
+{
+    "author": "9Hits",
+    "file": "google-search.js",
+    "title": "Google Search",
+    "description": "Script for doing google search <script>alert('ok')</script>"
+}
+```
