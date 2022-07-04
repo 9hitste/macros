@@ -14,6 +14,6 @@ Create your script file in the `scripts` folder, add your script information to 
     "author": "9Hits",
     "file": "google-search.js",
     "title": "Google Search",
-    "description": "Script for doing google search <script>alert('ok')</script>"
+    "description": "Script for doing google search"
 }
 ```
