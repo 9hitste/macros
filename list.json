@@ -7,6 +7,12 @@
     },
     {
         "author": "9Hits",
+        "file": "youtube-search.js",
+        "title": "Youtube Search",
+        "description": "Searching a video on youtube"
+    },
+    {
+        "author": "9Hits",
         "file": "reduce-bounce-rate.js",
         "title": "Reduce Bounce Rate",
         "description": "Reduce bounce rate by random click internal links"
