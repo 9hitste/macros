@@ -7,6 +7,12 @@
     },
     {
         "author": "9Hits",
+        "file": "google-search-ops.js",
+        "title": "Google Search (opsfafsme)",
+        "description": "Script for doing google search (Credits to opsfafsme)"
+    },
+    {
+        "author": "9Hits",
         "file": "youtube-search.js",
         "title": "Youtube Search",
         "description": "Searching a video on youtube"
