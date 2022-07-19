@@ -1,6 +1,7 @@
 /*
 To run this demo, please use this URL: https://www.google.com/recaptcha/api2/demo
 Also replace YOUR_API_KEY with your 2captcha/anti-captcha API key
+See demo: https://youtu.be/v-6c6ckUNpE
 */
 
 await WaitForLoading ();

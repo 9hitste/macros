@@ -1,6 +1,7 @@
 /*
 To run this demo, please use this URL: https://captcha.com/demos/features/captcha-demo.aspx
 Also replace YOUR_API_KEY with your 2captcha/anti-captcha API key
+See demo: https://youtu.be/v-6c6ckUNpE
 */
 
 await WaitForLoading ();
