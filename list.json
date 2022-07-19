@@ -1,6 +1,18 @@
 [
     {
         "author": "9Hits",
+        "file": "bypass-image-captcha.js",
+        "title": "Bypass image captcha",
+        "description": "Bypass image captcha demo"
+    },
+    {
+        "author": "9Hits",
+        "file": "bypass-recaptcha.js",
+        "title": "Bypass reCAPTCHA",
+        "description": "Bypass google reCAPTCHA demo"
+    },
+    {
+        "author": "9Hits",
         "file": "google-search.js",
         "title": "Google Search",
         "description": "Script for doing google search"
