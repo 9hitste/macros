@@ -40,5 +40,11 @@
     "file": "adstargets.com-adsclicker.js",
     "title": "adstargets.com Clicker",
     "description": "Script for clicking ads of Adstarget.com Network"
+},
+{
+    "author": "OwElko",
+    "file": "",
+    "title": "Native-Ads-Clicker.js",
+    "description": "Script for clicking Native Widget ads of bidvertiser.com"
 }
 ]
