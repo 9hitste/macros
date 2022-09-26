@@ -1,6 +1,7 @@
 //-- Config Start --
 const keywords = ["9hits", "9hits awesome"]; //the script will take random one
 const targetPattern = "9hits.com"; //can be a domain, a part of an URL
+const _2CaptchaAPIKey="";//In case we get a captcha when searching, 9hits will try to solve it if you set this API key, otherwise the browser will exit
 let maxpage = 3;
 //-- Config End --
 
@@ -16,6 +17,23 @@ await Typing (`${RandomArray(keywords)}\r`, 50, 100); // \r means hit Enter key 
 await WaitForLoading();
 
 await Delay(3000);
+
+//check if google show captcha
+if((await EvalScript ('location.pathname=="/sorry/index"'))) {
+    if(_2CaptchaAPIKey) {
+        const r = await SolveRecaptcha ("2captcha", _2CaptchaAPIKey);
+        if(r && r.request) await TryToCallRecaptchaCallBack (r.request);
+        else {
+            Exit();
+            return;
+        }
+    }
+    else {
+        Exit();
+        return;
+    }
+}
+
 const targetSelector = `a[href*="${targetPattern}"]`;
 let found = false;
 //start looking for the target
