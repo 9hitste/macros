@@ -1,5 +1,5 @@
-//-- Config Start --
-const keywords = ["9hits", "9hits awesome"]; //the script will take random one
+//-- Config Start -- UPDATE JAN 2024 - WORKING DESKTOP TRAFFIC ONLY 
+const keywords = ["9Hits", "9Hits Awesome","9Hits Traffic"]; //the script will take random one
 const targetPattern = "9hits.com"; //can be a domain, a part of an URL
 const _2CaptchaAPIKey="";//In case we get a captcha when searching, 9hits will try to solve it if you set this API key, otherwise the browser will exit
 let maxpage = 3;
@@ -47,10 +47,16 @@ do {
         break; //exit the loop
     }
     else {
-        Log("Next page...");
-        await ClickBySelector (isMobile ? "#botstuff a[href^='/search?q=']" : "#pnnext");
-        await WaitForLoading ();
-        await Delay(5000);
+        do { //scroll
+    scrl = Random(3,9);
+    for (var i = 1; i < scrl; i++) {
+        await EvaluateScript("var ddE = document.documentElement; ddE.scrollTo(0, ddE.clientHeight/(Math.floor(Math.random()*3)+9) + ddE.scrollTop);");
+        await Delay(Random(100,150));
+    }
+    await Delay (Random(1000,1500));
+    myTargetXpath = GenerateXpath("a", "href", "%" + targetPattern + "%");
+    foundLink = await GetAttribute(myTargetXpath, "href");
+} while (!foundLink)
     }
 }
 while(--maxpage > 0);
@@ -61,3 +67,4 @@ if(found) {
     Log("Finished");
 }
 else Log("Not found");
+Exit();
